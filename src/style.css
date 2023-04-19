@@ -3,3 +3,91 @@
     margin: 0;
     padding: 0;
 }
+
+body {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+#content {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "currentWeather . . ."
+    "time . . ."
+    "conditionIcon temp conditionText ."
+    "conditionIcon temp feelslike ."
+    "Wind Humidity Precipitation Visibility"
+    "wind humidity precipitation visibility";
+    border: 1px solid black;
+}
+
+#content > div {
+    display: grid;
+    gap: 20px;
+    /* border: 1px solid black; */
+    min-height: 20px;
+}
+
+
+
+
+
+
+#currentWeather {
+grid-area: currentWeather;
+}
+
+#localtime {
+grid-area: time;
+}
+
+#conditionIcon {
+grid-area: conditionIcon;
+}
+
+#temp_f {
+grid-area: temp;
+}
+
+#conditionText {
+grid-area: conditionText; 
+}
+
+#feelslike_f {
+grid-area: feelslike 
+}
+
+#Wind {
+grid-area: Wind;
+}
+
+#Humidity {
+grid-area: Humidity;
+}
+
+#Precipitation {
+grid-area: Precipitation;
+}
+
+#Visibility {
+grid-area: Visibility;
+}
+
+#wind_mph {
+grid-area: wind;
+}
+
+#humidity {
+grid-area: humidity;
+}
+
+#precip_in {
+grid-area: precipitation;
+}
+
+#vis_miles {
+grid-area: visibility;
+}
