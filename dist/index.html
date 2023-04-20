@@ -6,12 +6,10 @@
     <title>Weather App</title>
 </head>
 <body>
-    <div id="search">
-        <input type="text" name="searchbar" id="searchbar" value="Indianapolis">
-        <button type="submit" id="searchButton">Search</button>
-    </div>
+    
     <div id="content">
-        <div id="currentWeather">Current weather</div>
+        <div id="name">name</div>
+        <div id="searchIcon"><img src="../src/img/magnify.svg" alt="hello" srcset="" id="magnify"></div>
         <div id="localtime">time</div>
         <div id="conditionIcon"><img alt="weather icon" id="weatherImg"></div>
         <div id="temp_f">temp</div>
@@ -25,6 +23,10 @@
         <div id="humidity"></div>
         <div id="precip_in"></div>
         <div id="vis_miles"></div>
+    </div>
+    <div id="search" class="hideSearch">
+        <input type="text" name="searchbar" id="searchbar" value="Indianapolis">
+        <button type="submit" id="searchButton">Search</button>
     </div>
 </body>
 </html>

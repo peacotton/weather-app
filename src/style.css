@@ -7,57 +7,89 @@
 body {
     display: grid;
     place-content: center;
+    background-image: url(/src/img/hd-wallpaper-gc01c5a1fd_1920.jpg);
     height: 100vh;
+    color: white;
 }
 
 #content {
+    padding: 10px;
     display: grid;
+    background-color: #222124;
+    border-radius: 10%;
     grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: 
-    "currentWeather . . ."
+    "name name . search"
     "time . . ."
     "conditionIcon temp conditionText ."
     "conditionIcon temp feelslike ."
     "Wind Humidity Precipitation Visibility"
     "wind humidity precipitation visibility";
-    border: 1px solid black;
 }
+
+.hideSearch {
+    display: none;
+}
+
+.showSearch {
+    display: flex;
+    justify-content: center;
+}
+
 
 #content > div {
     display: grid;
+    place-content: center;
     gap: 20px;
     /* border: 1px solid black; */
     min-height: 20px;
 }
 
+#name {
+    grid-area: name;
+    font-size: 2em;
+}
 
+#searchIcon {
+    grid-area: search;
+    justify-self: end;
+    align-self: start;
+    margin: 20px 20px 0  0;
+}
 
-
-
-
-#currentWeather {
-grid-area: currentWeather;
+#magnify {
+    filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(190deg) brightness(106%) contrast(101%);
+    height: 25px;
 }
 
 #localtime {
-grid-area: time;
+    grid-area: time;
+    align-self: start;
 }
 
 #conditionIcon {
-grid-area: conditionIcon;
+    grid-area: conditionIcon;
+}
+
+#weatherImg {
+    height: 100px;
+    width: auto;
 }
 
 #temp_f {
-grid-area: temp;
+    grid-area: temp;
+    font-size: 2em;
 }
 
 #conditionText {
-grid-area: conditionText; 
+    grid-area: conditionText; 
+    align-self: end;
 }
 
 #feelslike_f {
-grid-area: feelslike 
+    grid-area: feelslike;
+    align-self: start;
 }
 
 #Wind {
@@ -75,6 +107,14 @@ grid-area: Precipitation;
 #Visibility {
 grid-area: Visibility;
 }
+
+#Wind,
+#Humidity,
+#Precipitation,
+#Visibility {
+    align-self: end;
+}
+
 
 #wind_mph {
 grid-area: wind;
